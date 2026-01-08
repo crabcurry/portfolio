@@ -77,16 +77,6 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
-            
-            // Animate skill bars
-            if (entry.target.classList.contains('skill-item')) {
-                const skillBar = entry.target.querySelector('.skill-progress');
-                const width = skillBar.style.width;
-                skillBar.style.width = '0%';
-                setTimeout(() => {
-                    skillBar.style.width = width;
-                }, 100);
-            }
         }
     });
 }, observerOptions);
