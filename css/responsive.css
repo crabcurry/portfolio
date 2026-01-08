@@ -1,0 +1,223 @@
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet (max-width: 968px) */
+@media screen and (max-width: 968px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-dot {
+        left: 13px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(10, 10, 15, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    /* About */
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Education */
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Hobbies */
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+    }
+
+    .timeline-dot {
+        left: 8px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .motto p {
+        font-size: 1.1rem;
+    }
+
+    .education-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-details h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    .scroll-indicator,
+    .contact-form,
+    footer {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .timeline::before {
+        background: black;
+    }
+
+    .btn {
+        border: 1px solid black;
+    }
+}

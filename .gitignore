@@ -1,0 +1,43 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ruby
+.bundle/
+vendor/bundle/
+*.gem
+.ruby-version
+
+# Logs & temp files
+log/
+tmp/
+*.log
+
+# Build / dist
+dist/
+build/
+
+# Coverage
+coverage/
+
+# Python (just in case)
+__pycache__/
+*.pyc
+
+# WSL
+*.pid
